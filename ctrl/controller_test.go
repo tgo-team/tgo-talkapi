@@ -1,9 +1,9 @@
-package user
+package ctrl
 
 import (
-	"github.com/golang/protobuf/proto"
 	"github.com/tgo-team/tgo-core/tgo"
 	"github.com/tgo-team/tgo-core/tgo/packets"
+	"github.com/tgo-team/tgo-talkapi/cmd"
 	"github.com/tgo-team/tgo-talkapi/test"
 	_ "github.com/tgo-team/tgo-talkapi/tgo/protocol/mqtt"
 	"github.com/tgo-team/tgo-talkapi/tgo/server/tcp"
@@ -13,9 +13,8 @@ import (
 	"time"
 )
 
-func TestUserLogin(t *testing.T) {
+func TestControllerServer(t *testing.T) {
 	tg := startTGO(t)
-	StartUser(tg)
 	var tcpServer *tcp.Server
 	for _, server := range tg.Servers {
 		s, ok := server.(*tcp.Server)
@@ -23,23 +22,27 @@ func TestUserLogin(t *testing.T) {
 			tcpServer = s
 		}
 	}
+	resultChan := make(chan int,0)
+	// 开启控制器
+	controller := New(tg)
+	controller.RegisterCMDHandler("login", func(ctx *cmd.Context) {
+		resultChan<- 1
+	})
+	controller.Start()
 	conn, err := MustConnectServer(tcpServer.RealTCPAddr())
 	test.Nil(t, err)
 
-	loginReq := &UserLoginReq{}
-	loginReq.Username = "1"
-	loginReq.Password = "1"
-	data,err := proto.Marshal(loginReq)
-	test.Nil(t,err)
-	cp := packets.NewCMDPacket(100, data)
+	data := []byte{0x1}
+	test.Nil(t, err)
+	cp := packets.NewCmdPacket("login", data)
 	cp.TokenFlag = true
 	cp.Token = "2334"
-	sendCMDPacket(t, conn, tg, cp)
-	time.Sleep(time.Millisecond * 500)
+	sendCmdPacket(t, conn, tg, cp)
+	<- resultChan
 }
 
-func sendCMDPacket(t *testing.T, conn net.Conn, tg *tgo.TGO, cmdPacket *packets.CMDPacket) {
-	WritePacket(t, conn, cmdPacket, tg)
+func sendCmdPacket(t *testing.T, conn net.Conn, tg *tgo.TGO, CmdPacket *packets.CmdPacket) {
+	WritePacket(t, conn, CmdPacket, tg)
 }
 
 func WritePacket(t *testing.T, conn net.Conn, packet packets.Packet, tg *tgo.TGO) {

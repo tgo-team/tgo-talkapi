@@ -1,0 +1,14 @@
+//指定版本
+//注意proto3与proto2的写法有些不同
+syntax = "proto3";
+
+//包名，通过protoc生成时go文件时
+package cmd;
+
+//登录请求
+message Error {
+    int32 status = 1; // 状态
+    string message = 2; // 消息
+}
+
+

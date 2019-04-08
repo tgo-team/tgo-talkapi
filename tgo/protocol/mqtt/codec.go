@@ -27,12 +27,6 @@ func (m *MQTTCodec) DecodePacket(reader tgo.Conn) (packets.Packet, error) {
 		return nil, err
 	}
 
-	if fh.PacketType == packets.Connect {
-		return m.decodeConnect(fh, reader)
-	}
-	if fh.PacketType == packets.Connack {
-		return m.decodeConnack(fh, reader)
-	}
 	if fh.PacketType == packets.Pingreq {
 		return &packets.PingreqPacket{FixedHeader: *fh}, nil
 	}
@@ -40,14 +34,16 @@ func (m *MQTTCodec) DecodePacket(reader tgo.Conn) (packets.Packet, error) {
 		return &packets.PingrespPacket{FixedHeader: *fh}, nil
 	}
 	if fh.PacketType == packets.Message {
-		msgPacket,err := m.decodeMessage(fh, reader)
-		return msgPacket,err
+		return  m.decodeMessage(fh, reader)
 	}
 	if fh.PacketType == packets.Msgack {
 		return m.decodeMsgack(fh, reader)
 	}
-	if fh.PacketType == packets.CMD {
+	if fh.PacketType == packets.Cmd {
 		return m.decodeCMD(fh, reader)
+	}
+	if fh.PacketType == packets.Cmdack {
+		return m.decodeCmdack(fh, reader)
 	}
 	return nil, fmt.Errorf("不支持的包类型[%d]",fh.PacketType)
 }
@@ -60,18 +56,6 @@ func (m *MQTTCodec) EncodePacket(packet packets.Packet) ([]byte, error) {
 	var remainingBytes []byte
 	var err error
 
-	if packetType == packets.Connect {
-		remainingBytes, err = m.encodeConnect(packet)
-		if err != nil {
-			return nil, err
-		}
-	}
-	if packetType == packets.Connack {
-		remainingBytes, err = m.encodeConnack(packet)
-		if err != nil {
-			return nil, err
-		}
-	}
 	if packetType == packets.Message {
 		remainingBytes, err = m.encodeMessage(packet)
 		if err != nil {
@@ -84,8 +68,14 @@ func (m *MQTTCodec) EncodePacket(packet packets.Packet) ([]byte, error) {
 			return nil, err
 		}
 	}
-	if packetType == packets.CMD {
+	if packetType == packets.Cmd {
 		remainingBytes, err = m.encodeCMD(packet)
+		if err != nil {
+			return nil, err
+		}
+	}
+	if packetType == packets.Cmdack {
+		remainingBytes, err = m.encodeCmdack(packet)
 		if err != nil {
 			return nil, err
 		}
@@ -109,7 +99,7 @@ func (m *MQTTCodec) EncodePacket(packet packets.Packet) ([]byte, error) {
 	return packetBuffer.Bytes(), nil
 }
 
-func (m *MQTTCodec) decodeFixedHeader(reader io.Reader) (*packets.FixedHeader, error) {
+func (m *MQTTCodec) decodeFixedHeader(reader tgo.Conn) (*packets.FixedHeader, error) {
 	b := make([]byte, 1)
 	_, err := io.ReadFull(reader, b)
 	if err != nil {
@@ -122,6 +112,11 @@ func (m *MQTTCodec) decodeFixedHeader(reader io.Reader) (*packets.FixedHeader, e
 	fh.Qos = (typeAndFlags >> 1) & 0x03
 	fh.Retain = typeAndFlags&0x01 > 0
 	fh.RemainingLength = decodeLength(reader)
+
+	statefulCon,ok := reader.(tgo.StatefulConn)
+	if ok {
+		fh.From = statefulCon.GetID()
+	}
 
 	return fh, nil
 }

@@ -1,0 +1,35 @@
+//指定版本
+//注意proto3与proto2的写法有些不同
+syntax = "proto3";
+
+//包名，通过protoc生成时go文件时
+package user;
+
+//登录请求
+message UserLoginReq {
+    string username = 1; // 用户名
+    string password = 2; // 密码
+}
+
+//登录返回
+message UserLoginResp {
+    string open_id = 1;
+    uint64 talk_id = 2; // talk的唯一ID，每个用户都会分配一个talk id
+    string token = 3; //  token
+    string username = 4;
+    string nickname = 5; // 用户昵称
+    int32 sex = 6; // 0. 未设置 1.男 2.女
+    string zone = 7; // 区号
+    string mobile = 8; // 手机号
+}
+
+message RegisterReq {
+    string username = 1; // 用户名
+    string nickname = 2; // 用户昵称
+    int32 sex = 3; // 用户性别
+    string zone = 4; // 区号
+    string mobile = 5; // 手机号
+    string password = 6; // 密码
+}
+
+

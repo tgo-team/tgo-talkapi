@@ -3,7 +3,6 @@ package mqtt
 import (
 	"bytes"
 	"fmt"
-	"github.com/tgo-team/tgo-core/tgo"
 	"github.com/tgo-team/tgo-core/tgo/packets"
 	"io"
 )
@@ -11,15 +10,13 @@ import (
 func (m *MQTTCodec) decodeMessage(fh *packets.FixedHeader,reader io.Reader) ( *packets.MessagePacket, error) {
 	msg := packets.NewMessagePacketHeader(*fh)
 	var payloadLength = msg.RemainingLength
-	msg.From = packets.DecodeUint64(reader)
-	if msg.From == 0 {
-		statefulConn,ok := reader.(tgo.StatefulConn)
-		if ok {
-			msg.From = statefulConn.GetID()
-		}
+	from := packets.DecodeUint64(reader)
+	if msg.From == 0 { // 如果不存在from 则使用协议里的 否则使用header里的from （因为有状态连接不需要从协议里获取from）
+		msg.From = from
 	}
 	msg.ChannelID = packets.DecodeUint64(reader)
-	payloadLength -= 8 + 8 // 减去 ChannelID的长度 + From的长度
+	msg.Timestamp = int64(packets.DecodeUint32(reader))
+	payloadLength -= 8 + 8 + 4 // 减去 From的长度 + ChannelID的长度 + Timestamp的长度
 	if msg.Qos > 0 {
 		msg.MessageID = packets.DecodeUint64(reader)
 		payloadLength -=  8 // 减去messageID长度
@@ -37,6 +34,7 @@ func (m *MQTTCodec) encodeMessage(packet packets.Packet) ([]byte, error) {
 	var body bytes.Buffer
 	body.Write(packets.EncodeUint64(msg.From))
 	body.Write(packets.EncodeUint64(msg.ChannelID))
+	body.Write(packets.EncodeUint32(uint32(msg.Timestamp)))
 	if msg.Qos > 0 {
 		body.Write(packets.EncodeUint64(msg.MessageID))
 	}

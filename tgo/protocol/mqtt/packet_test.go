@@ -3,7 +3,7 @@ package mqtt
 import (
 	"bytes"
 	"github.com/tgo-team/tgo-core/tgo/packets"
-	"github.com/tgo-team/tgo-talkapi/test"
+	"github.com/tgo-team/tgo-talk/test"
 	"testing"
 )
 
