@@ -5,6 +5,14 @@ syntax = "proto3";
 //包名，通过protoc生成时go文件时
 package user;
 
+message UserVo {
+    string open_id = 1; // 用户唯一open_id
+    uint64 talk_id = 2; // 用户talk id
+    string nickname = 3; // 用户昵称
+    int32 sex = 4; // 用户性别
+
+}
+
 //登录请求
 message UserLoginReq {
     string username = 1; // 用户名
@@ -23,6 +31,7 @@ message UserLoginResp {
     string mobile = 8; // 手机号
 }
 
+// 注册请求
 message RegisterReq {
     string username = 1; // 用户名
     string nickname = 2; // 用户昵称
@@ -32,4 +41,10 @@ message RegisterReq {
     string password = 6; // 密码
 }
 
+// 查询单个用户的请求
+message UserQueryReq {
+    uint64 talk_id = 1; // talk ID
+    string open_id = 2; // open_id
+    string mobile = 3; // 手机号
+}
 

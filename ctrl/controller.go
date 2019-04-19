@@ -4,24 +4,27 @@ import (
 	"fmt"
 	"github.com/tgo-team/tgo-core/tgo"
 	"github.com/tgo-team/tgo-core/tgo/packets"
+	"github.com/tgo-team/tgo-talkapi/cache"
 	"github.com/tgo-team/tgo-talkapi/cmd"
 	"github.com/tgo-team/tgo-talkapi/config"
 )
 
 type Controller struct {
 	cmdManager *cmd.Manager
-	handlerMap map[string]cmd.Handler
+	handlerMap map[string][]cmd.Handler
 	tgo        *tgo.TGO
 	waitGroup  tgo.WaitGroupWrapper
 	config *config.Config
+	Cache cache.Cache
 }
 
-func New(tgo *tgo.TGO,config *config.Config) *Controller {
+func New(tgo *tgo.TGO,config *config.Config,cache cache.Cache) *Controller {
 	c := &Controller{
 		tgo:        tgo,
 		cmdManager: cmd.NewManager(),
-		handlerMap: map[string]cmd.Handler{},
+		handlerMap: map[string][]cmd.Handler{},
 		config: config,
+		Cache: cache,
 	}
 	c.waitGroup.Wrap(c.cmdLoop)
 	return c
@@ -31,11 +34,16 @@ func New(tgo *tgo.TGO,config *config.Config) *Controller {
 func (c *Controller) cmdLoop() {
 	for {
 		cmdObj := c.cmdManager.PopCMD()
-		handler := c.handlerMap[cmdObj.Cmd]
-		if handler != nil {
+		handlers := c.handlerMap[cmdObj.Cmd]
+		if handlers != nil && len(handlers)>0 {
 			c.waitGroup.Add(1)
 			go func(cmdObj *cmd.CMD) {
-				handler(cmd.NewContext(cmdObj))
+				cmdContext := cmd.NewContext(cmdObj,c.Cache,c.config)
+				for _,handler :=range handlers {
+					if !cmdContext.IsAbort() {
+						handler(cmdContext)
+					}
+				}
 				c.waitGroup.Done()
 			}(cmdObj)
 		}
@@ -47,8 +55,8 @@ func (c *Controller) Start() {
 }
 
 // RegisterCMDHandler 注册cmd处理者
-func (c *Controller) RegisterHandlerFunc(cmd string, handler cmd.Handler) {
-	c.handlerMap[cmd] = handler
+func (c *Controller) RegisterHandlerFuncs(cmd string, handlers... cmd.Handler) {
+	c.handlerMap[cmd] = handlers
 }
 
 func (c *Controller) server(m *tgo.MContext) {

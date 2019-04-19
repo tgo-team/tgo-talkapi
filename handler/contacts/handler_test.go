@@ -1,4 +1,4 @@
-package user
+package contacts
 
 import (
 	"github.com/golang/protobuf/proto"
@@ -10,26 +10,34 @@ import (
 	"time"
 )
 
-func TestUserLogin(t *testing.T) {
+func TestSyncContacts(t *testing.T) {
 	cfg := handler.GetTestConfig()
 	tg,controller,conn := handler.StartTGO(t,cfg)
-	u := &Handler{
-		cfg:handler.GetTestConfig(),
+
+	controller.Cache.Set("token:2334","123456",0)
+
+	u := Handler{
 		dao:NewTestDao(),
 	}
 	u.RegisterHandler(controller)
 
-	loginReq := &UserLoginReq{
-		Username: "test",
-		Password: "123456",
+	syncContactsReq := &SyncContactsReq{
+		SyncKey: "2019-11-12@12",
+		Limit: 100,
 	}
-	data,_ :=proto.Marshal(loginReq)
-	cp := packets.NewCmdPacket("login", data)
+	data,_ :=proto.Marshal(syncContactsReq)
+	cp := packets.NewCmdPacket("sync_contacts", data)
 	cp.TokenFlag = true
 	cp.Token = "2334"
 	cmdackPacket := handler.SendCmdPacket(t, conn, tg, cp)
 
 	test.Equal(t,cmd.SUCCESS,cmdackPacket.Status)
+
+	resp := SyncContactsResp{}
+	err := proto.Unmarshal(cmdackPacket.Payload,&resp)
+	test.Nil(t,err)
+
+	println(resp.SyncKey)
 
 	time.Sleep(time.Millisecond*50)
 }
@@ -44,14 +52,14 @@ func NewTestDao() *TestDao  {
 	}
 }
 
-func (t *TestDao) InsertUser(user *User) error {
+func (d *TestDao) SyncContacts(syncKey string,openId string,limit uint64) ([]*ContactsDetail,error)  {
 
-	t.cacheMap[user.Username] = user
-	return nil
-
+	return []*ContactsDetail{
+		{
+			Contacts:Contacts{
+				OpenId: "23344",
+				RelationOpenId: "1223",
+			},
+		},
+	},nil
 }
-func (t *TestDao) QueryUser(username string) (*User,error) {
-
-	return &User{Username:"test",Password:"123456"},nil
-}
-

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+//包名，通过protoc生成时go文件时
+package contacts;
+
+
+message ContactsVo {
+    int64 id = 1;
+    string openId = 2;
+    uint64 talkId = 3;
+    string relationOpenId = 4;
+    int32 type = 5;
+    string remark = 6;
+    string updatedAt = 7;
+    string createdAt = 8;
+    string relationNickname = 9;
+}
+
+//同步联系人请求
+message SyncContactsReq {
+    string syncKey = 1; // 同步key
+    uint64 limit = 2; // 限制
+}
+
+
+message SyncContactsResp {
+    string syncKey = 1; // 同步key
+    repeated ContactsVo contacts = 2;
+}

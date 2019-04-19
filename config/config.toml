@@ -2,10 +2,23 @@
 # 节点唯一ID
 node_id=1001
 #talk服务器地址
-talk_http_url = "http://192.168.0.100:4444"
+talk_http_url = "http://127.0.0.1:4444"
 
+# token失效时间  168h是168个小时=7天
+token_expire="168h"
+
+# mysql配置
 [mysql]
 addr="127.0.0.1:3306"
 db = "test"
 user="root"
-password=""
+password="a123456"
+
+# redis配置
+[redis]
+addr="127.0.0.1:6379"
+
+
+# 缓存前缀（一般不需要修改）
+[cache_prefix]
+token_prefix="token:"

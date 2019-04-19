@@ -69,6 +69,7 @@ type BaseModel struct {
 	Id int64 `json:"id"`
 	CreatedAt Time `json:"created_at"`
 	UpdatedAt Time `json:"updated_at"`
+	IsDeleted int `json:"is_deleted"`
 }
 
 func (t *Time) UnmarshalJSON(data []byte) (err error) {

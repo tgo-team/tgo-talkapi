@@ -5,6 +5,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/tgo-team/tgo-talkapi/cmd"
 	"github.com/tgo-team/tgo-talkapi/config"
+	"github.com/tgo-team/tgo-talkapi/constant"
 	"github.com/tgo-team/tgo-talkapi/ctrl"
 	"github.com/tgo-team/tgo-talkapi/handler/db"
 	"github.com/tgo-team/tgo-talkapi/utils"
@@ -17,13 +18,16 @@ type Handler struct {
 	idFactory *utils.GuidFactory
 	cfg       *config.Config
 	db *db.DB
+	dao Dao
 }
 
 func NewHandler(cfg *config.Config) *Handler {
-	return &Handler{
+	h := &Handler{
 		cfg:       cfg,
 		idFactory: utils.NewGUIDFactory(cfg.NodeId),
+		dao: NewDefaultDao(),
 	}
+	return h
 }
 
 // Login 用户登录
@@ -36,7 +40,7 @@ func (h *Handler) Login(c *cmd.Context) {
 		panic(err)
 	}
 	// 查询登录用户信息
-	userModel,err := QueryUser(loginReq.Username)
+	userModel,err := h.dao.QueryUserWithUsername(loginReq.Username)
 	if userModel==nil {
 		c.Error("用户不存在！")
 		c.ReplyErrorMsg("用户不存在！")
@@ -62,6 +66,13 @@ func (h *Handler) Login(c *cmd.Context) {
 		}
 	}
 
+	// 设置token
+	err = c.Cache.Set(fmt.Sprintf("%s%s",h.cfg.CachePrefix.TokenPrefix,token),userModel.OpenId,h.cfg.TokenExpire.Duration)
+	if err!=nil {
+		c.Error("设置token失败！-> %v", err)
+		c.ReplyErrorMsg("设置token失败！")
+		return
+	}
 	loginResp := &UserLoginResp{
 		OpenId:   userModel.OpenId,
 		TalkId:   userModel.TalkId,
@@ -89,7 +100,7 @@ func (h *Handler) Register(c *cmd.Context) {
 		return
 	}
 	// 查询登录用户信息
-	userModel,err := QueryUser(registerReq.Username)
+	userModel,err := h.dao.QueryUserWithUsername(registerReq.Username)
 	if err!=nil {
 		c.Error("查询用户数据出错！-> %v",err)
 		c.ReplyErrorMsg("查询用户数据出错！")
@@ -115,12 +126,37 @@ func (h *Handler) Register(c *cmd.Context) {
 	userModel.Nickname = registerReq.Nickname
 	userModel.Password = registerReq.Password
 	userModel.Sex = int(registerReq.Sex)
-	err = InsertUser(userModel)
+	err = h.dao.InsertUser(userModel)
 	if err!=nil {
 		c.Error("添加用户信息出错！-> %v",err)
 		c.ReplyErrorMsg("添加用户信息出错！")
 		return
 	}
+}
+
+// 获取单个用户信息
+func (h *Handler) GetUser(c *cmd.Context) {
+	userQueryReq := &UserQueryReq{}
+	err := c.UnmarshalProto(c.Param(), userQueryReq)
+	if err != nil {
+		c.Error("数据格式有误！-> %v",err)
+		c.ReplyErrorMsg("数据格式有误！")
+		return
+	}
+	user,err := h.dao.QueryUserWithOption(userQueryReq.TalkId,userQueryReq.OpenId)
+	if err!=nil {
+		c.Error("查询用户数据出错！-> %v",err)
+		c.ReplyErrorMsg("查询用户数据出错！")
+		return
+	}
+
+	if user == nil {
+		c.Error("用户不存在！-> %v",userQueryReq)
+		c.ReplyError(constant.ERROR_USER_NO_EXIST,"用户不存在！")
+		return
+	}
+	userVo := h.userToVo(user)
+	c.ReplySuccess(c.MarshalProto(userVo))
 }
 
 func (h *Handler) checkRegister(registerReq *RegisterReq) error {
@@ -164,6 +200,18 @@ func (h *Handler) requestTalkUpdateClient(talkClientUpdateUrl string, token stri
 }
 
 func (h *Handler) RegisterHandler(c *ctrl.Controller) {
-	c.RegisterHandlerFunc("login", h.Login)
-	c.RegisterHandlerFunc("register", h.Register)
+	c.RegisterHandlerFuncs("login", h.Login)
+	c.RegisterHandlerFuncs("register", h.Register)
+	c.RegisterHandlerFuncs("get_user", h.GetUser)
+}
+
+
+
+func (h *Handler) userToVo(user *User) *UserVo {
+	userVo := &UserVo{}
+	userVo.OpenId = user.OpenId
+	userVo.TalkId = user.TalkId
+	userVo.Nickname = user.Nickname
+	userVo.Sex = int32(user.Sex)
+	return userVo
 }

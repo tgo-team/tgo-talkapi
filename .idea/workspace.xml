@@ -2,49 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d93d31ea-add4-401f-8f73-d04eaf013eb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/cmd.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sql/201904082104.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ctrl/controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ctrl/controller_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/contacts/contacts.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/contacts/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/db/const.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/db/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/handler_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/user.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/user_db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tgo/protocol/mqtt/cmdack.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/common.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/guid.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/json.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/network/network.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/qreflect/qreflect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/uuid.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sql/201904091604.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constant/constant.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handler/contacts/contacts.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handler/contacts/contacts_db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handler/contacts/handler_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sql/201904082104.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql/201904082104.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ctrl/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/ctrl/controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/contacts/contacts.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/contacts/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/contacts/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/db/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/handler_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/handler_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/user_db.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/user_db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/codec.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/protocol/mqtt/codec.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/connack.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/connect.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/message.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/protocol/mqtt/message.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/msgack.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/protocol/mqtt/msgack.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/protocol/mqtt/packet_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/protocol/mqtt/packet_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/server/tcp/conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/server/tcp/conn.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/server/tcp/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/server/tcp/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgo/storage/memory/storage.go" beforeDir="false" afterPath="$PROJECT_DIR$/tgo/storage/memory/storage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/error.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user_handler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user_handler_test.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,52 +54,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handler/user/handler.go">
+        <entry file="file://$PROJECT_DIR$/constant/constant.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1618">
-              <caret line="106" column="14" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+            <state relative-caret-position="57">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handler/user/user.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding>
-                <element signature="e#14#231#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-              <folding>
-                <element signature="e#14#558#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/config.toml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/sql/201904082104.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="107" selection-start-line="17" selection-start-column="107" selection-end-line="17" selection-end-column="107" />
             </state>
           </provider>
         </entry>
@@ -122,32 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handler/user/user_db.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding>
-                <element signature="e#14#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/select.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="346" column="21" selection-start-line="346" selection-start-column="21" selection-end-line="346" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handler/db/db.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-              <folding>
-                <element signature="e#12#122#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1083">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -155,8 +86,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handler/user/user.pb.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
+            <state relative-caret-position="418">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/select.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6232">
+              <caret line="332" column="21" selection-start-line="332" selection-start-column="21" selection-end-line="332" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/dbr.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3591">
+              <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handler/contacts/handler.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1045">
+              <caret line="60" selection-start-line="60" selection-end-line="73" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="152">
+                <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.toml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -191,13 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tgo/server/test.go" />
-        <option value="$PROJECT_DIR$/tgo/server/tcp/conn_test.go" />
-        <option value="$PROJECT_DIR$/tgo/server/tcp/server_test.go" />
-        <option value="$PROJECT_DIR$/tgo/protocol/mqtt/packet_test.go" />
-        <option value="$PROJECT_DIR$/go.sum" />
-        <option value="$PROJECT_DIR$/user/user.proto" />
-        <option value="$PROJECT_DIR$/user/user_handler_test.go" />
         <option value="$PROJECT_DIR$/tgo/storage/memory/storage.go" />
         <option value="$PROJECT_DIR$/cmd/controller.go" />
         <option value="$PROJECT_DIR$/controller/controller.go" />
@@ -209,13 +190,10 @@
         <option value="$PROJECT_DIR$/ctrl/controller_test.go" />
         <option value="$PROJECT_DIR$/handler/user_test.go" />
         <option value="$PROJECT_DIR$/handler/user.go" />
-        <option value="$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go" />
-        <option value="$PROJECT_DIR$/handler/test.go" />
         <option value="$PROJECT_DIR$/handler/user/user_test.go" />
         <option value="$PROJECT_DIR$/tgo/protocol/mqtt/cmdack.go" />
         <option value="$PROJECT_DIR$/tgo/protocol/mqtt/codec.go" />
         <option value="$PROJECT_DIR$/go.mod" />
-        <option value="$PROJECT_DIR$/handler/user/handler_test.go" />
         <option value="$PROJECT_DIR$/user/user_handler.go" />
         <option value="$PROJECT_DIR$/handler/user/db/user.go" />
         <option value="$PROJECT_DIR$/db/user.go" />
@@ -225,31 +203,41 @@
         <option value="$PROJECT_DIR$/config.toml" />
         <option value="$PROJECT_DIR$/utils/uuid.go" />
         <option value="$PROJECT_DIR$/utils/network/network.go" />
-        <option value="$PROJECT_DIR$/handler/user/user.proto" />
         <option value="$PROJECT_DIR$/utils/guid.go" />
-        <option value="$PROJECT_DIR$/cmd/cmd.go" />
-        <option value="$PROJECT_DIR$/ctrl/controller.go" />
-        <option value="$PROJECT_DIR$/handler/contacts/handler.go" />
         <option value="$PROJECT_DIR$/handler/contacts/model/contacts.go" />
-        <option value="$PROJECT_DIR$/handler/contacts/contacts.go" />
         <option value="$PROJECT_DIR$/utils/common.go" />
         <option value="$PROJECT_DIR$/handler/user/user.go" />
-        <option value="$PROJECT_DIR$/handler/user/handler.go" />
-        <option value="$PROJECT_DIR$/config/config.go" />
+        <option value="$PROJECT_DIR$/handler/contacts/contacts.go" />
         <option value="$PROJECT_DIR$/handler/db/db.go" />
+        <option value="$PROJECT_DIR$/config/config.go" />
+        <option value="$PROJECT_DIR$/middleware/auth.go" />
+        <option value="$PROJECT_DIR$/ctrl/controller.go" />
+        <option value="$PROJECT_DIR$/handler/test.go" />
+        <option value="$PROJECT_DIR$/handler/user/handler_test.go" />
+        <option value="$PROJECT_DIR$/handler/contacts/handler_test.go" />
         <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go" />
+        <option value="$PROJECT_DIR$/cmd/cmd.go" />
+        <option value="$PROJECT_DIR$/cache/cache.go" />
+        <option value="$PROJECT_DIR$/config/sql/201904091604.sql" />
         <option value="$PROJECT_DIR$/config/sql/201904082104.sql" />
+        <option value="$PROJECT_DIR$/handler/contacts/contacts.proto" />
+        <option value="$PROJECT_DIR$/handler/contacts/contacts_db.go" />
+        <option value="$PROJECT_DIR$/handler/contacts/handler.go" />
+        <option value="$PROJECT_DIR$/handler/user/user.proto" />
+        <option value="$PROJECT_DIR$/constant/constant.go" />
+        <option value="$PROJECT_DIR$/handler/user/handler.go" />
         <option value="$PROJECT_DIR$/handler/user/user_db.go" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config/config.toml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="396" />
-    <option name="y" value="24" />
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="x" value="966" />
+    <option name="y" value="23" />
+    <option name="width" value="954" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -259,6 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,19 +269,12 @@
             <path>
               <item name="tgo-talkapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="tgo-talkapi" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tgo-talkapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="tgo-talkapi" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="contacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgo-talkapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgo-talkapi" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tgo-talkapi" type="b2602c69:ProjectViewProjectNode" />
@@ -300,22 +282,10 @@
               <item name="handler" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tgo-talkapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgo-talkapi" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tgo-talkapi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tgo-talkapi" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="qreflect" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,18 +300,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/sql" />
+      <recent name="$PROJECT_DIR$/utils" />
+      <recent name="$PROJECT_DIR$/handler/db" />
+      <recent name="$PROJECT_DIR$/cmd" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/handler/user" />
       <recent name="$PROJECT_DIR$/handler/contacts" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/user" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utils" />
-      <recent name="$PROJECT_DIR$/handler/db" />
-      <recent name="$PROJECT_DIR$/cmd" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/handler" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -356,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build github.com/tgo-team/tgo-talkapi">
     <configuration name="go build github.com/tgo-team/tgo-talkapi" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tgo-talkapi" />
       <working_directory value="$PROJECT_DIR$" />
@@ -375,15 +345,15 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/ctrl" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tgo-talkapi" />
-      <working_directory value="$PROJECT_DIR$/ctrl" />
+      <working_directory value="$PROJECT_DIR$/handler/contacts" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="github.com/tgo-team/tgo-talkapi/ctrl" />
+      <package value="github.com/tgo-team/tgo-talkapi/handler/contacts" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestUserLogin$" />
+      <pattern value="^TestSyncContacts$" />
       <method v="2" />
     </configuration>
     <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -410,56 +380,55 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build github.com/tgo-team/tgo-talkapi" />
         <item itemvalue="Go Test.TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" />
+        <item itemvalue="Go Test.TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" />
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Test.TestUserLogin in github.com/tgo-team/tgo-talkapi/handler" />
-        <item itemvalue="Go Test.TestUserLogin in github.com/tgo-team/tgo-talkapi/ctrl" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 16h 51m 36s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 13h 57m 54s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 32m 16s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 19m 25s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 38m 38s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 25m 58s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 40m 14s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 27m 18s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 46m 43s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 28m 44s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 47m 58s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 28m 56s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 50m 43s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 29m 12s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 51m 06s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 37m 28s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 52m 35s.xml">
-      <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSyncContacts_in_github_com_tgo-team_tgo-talkapi_handler_contacts - 2019.04.09 at 14h 39m 42s.xml">
+      <configuration name="TestSyncContacts in github.com/tgo-team/tgo-talkapi/handler/contacts" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.03 at 17h 53m 06s.xml">
+    <history-entry file="TestUserLogin_in_github_com_tgo-team_tgo-talkapi_handler_user - 2019.04.09 at 14h 41m 50s.xml">
       <configuration name="TestUserLogin in github.com/tgo-team/tgo-talkapi/handler/user" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2428115" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13897763" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3176991" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3619469" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -477,7 +446,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Jenkins" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.09531417" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.03088392" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,97 +463,15 @@
           <line>11</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/tgo-team/tgo-core@v0.0.0-20190331075353-07c6859828ab/tgo/route.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/user_handler_test.go" />
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/connect.go" />
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/connack.go" />
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/packet.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/message.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ctrl/controller_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/user.proto" />
-    <entry file="file://$PROJECT_DIR$/go.mod">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/codec.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="68" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="92" />
-          <folding>
-            <element signature="e#14#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/cmdack.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="99" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tgo/server/tcp/conn.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#13#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/msgack.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/user_handler.go" />
-    <entry file="file://$PROJECT_DIR$/handler/test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#17#374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmd/error.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -633,20 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/user/user.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/cmd.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/guid.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -658,23 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="439" column="13" selection-start-line="439" selection-start-column="13" selection-end-line="439" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ctrl/controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handler/contacts/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#18#111#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,13 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/db.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/db/db.go" />
     <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/types.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -720,16 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/contacts/contacts.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="e#15#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/jinzhu/gorm@v1.9.2/model.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -747,102 +587,244 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/user/handler_test.go">
+    <entry file="file:///usr/local/go/src/time/format.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="248">
+          <caret line="1277" column="5" selection-start-line="1277" selection-start-column="5" selection-end-line="1277" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/select.go">
+    <entry file="file://$PROJECT_DIR$/tgo/test.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/message.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/cmdack.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="346" column="21" selection-start-line="346" selection-start-column="21" selection-end-line="346" selection-end-column="21" />
+        <state relative-caret-position="266">
+          <caret line="19" column="99" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/dbr.go">
+    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/tgo-team/tgo-core@v0.0.0-20190403094729-6be535c3d510/tgo/packets/packet.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="-708">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
+    <entry file="file://$PROJECT_DIR$/handler/test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-          <folding>
-            <element signature="e#14#558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="6" column="137" selection-start-line="6" selection-start-column="137" selection-end-line="6" selection-end-column="137" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="309">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#16#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/db/db.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+        <state relative-caret-position="483">
+          <caret line="88" column="14" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/golang/protobuf@v1.3.1/proto/decode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="333" column="27" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/go-sql-driver/mysql@v1.4.1/packets.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/user/handler_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/contacts/handler_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tgo/protocol/mqtt/cmd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="81" />
           <folding>
-            <element signature="e#12#122#0" expanded="true" />
+            <element signature="e#14#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/user/handler.go">
+    <entry file="file://$PROJECT_DIR$/ctrl/controller.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1618">
-          <caret line="106" column="14" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+        <state relative-caret-position="-262">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/middleware/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/cmd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/cache.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
           <folding>
-            <element signature="e#14#231#0" expanded="true" />
+            <element signature="e#15#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/contacts/contacts_db.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="68" column="82" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
+          <folding>
+            <element signature="e#18#96#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/sql/201904082104.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="107" selection-start-line="17" selection-start-column="107" selection-end-line="17" selection-end-column="107" />
+        <state relative-caret-position="684">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/user/user.pb.go">
+    <entry file="file://$PROJECT_DIR$/handler/contacts/contacts.pb.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="233" column="22" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
+        <state relative-caret-position="248">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/contacts/contacts.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/user/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="145" column="39" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/sql/201904091604.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constant/constant.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/user/user.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/user/user_db.go">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/user/user.pb.go">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#14#76#0" expanded="true" />
-          </folding>
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/select.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6232">
+          <caret line="332" column="21" selection-start-line="332" selection-start-column="21" selection-end-line="332" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../pkg/mod/github.com/gocraft/dbr@v0.0.0-20190131145710-48a049970bd2/dbr.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3591">
+          <caret line="196" column="5" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/contacts/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="60" selection-start-line="60" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.toml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="152">
+            <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
